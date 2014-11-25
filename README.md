@@ -19,7 +19,7 @@ Then we can train one of several models.  A mixture of Gaussians, for instance..
 # Mixture of 2-D Gaussians Classifier
 num_of_mixtures = 3
 gauss_mixture_model = GaussianMixtureClassifier(num_of_mixtures)
-gauss_mixture_model.train(made_data, missed_data, 10)
+gauss_mixture_model.train(made_data, missed_data, max_iterations=10)
 gauss_mixture_model.test(test_features, test_labels)
 gauss_mixture_model.visualize()
 ```
