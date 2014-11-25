@@ -55,4 +55,4 @@ Missed Gauss #2 Params: mu=[25.14,19.72], cov=[148.56,-3.55;-3.55,122.63]
 Test Accuracy: 0.580941
 ```
 Decision Boundaries (Green = Make, Red = Miss)
-![Alt text](/position_graphs/G/Gaussian_Mixture_Model.png?raw=true "Decision Boundary for Mix. of Gaussians")
+![Alt text](/results/spatial_features_results/Gaussian_Mixture_Model.png?raw=true "Decision Boundary for Mix. of Gaussians")
