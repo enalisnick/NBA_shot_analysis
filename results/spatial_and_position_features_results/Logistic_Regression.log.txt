@@ -8,3 +8,13 @@ Logistic Regression Classifier initialized at 2014-11-25 00:56:27.938210
 Test Accuracy: 0.588506
 Miss Baseline Accuracy: 0.533681
 
+Logistic Regression Classifier initialized at 2014-11-25 02:28:45.286722
+
+Test Accuracy: 0.577596
+Miss Baseline Accuracy: 0.487189
+
+Logistic Regression Classifier initialized at 2014-11-25 02:59:47.954174
+
+Test Accuracy: 0.614810
+Miss Baseline Accuracy: 0.538816
+

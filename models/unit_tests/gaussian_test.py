@@ -1,5 +1,7 @@
 from Distributions import *
 
+""" Did this on the fly.  To do: write good ones """
+
 g = Gaussian(2)
 data = np.random.rand(100,2)
 #g.fit(data)

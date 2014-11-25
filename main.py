@@ -1,4 +1,4 @@
-from data.data_accessors import *
+from data.data_accessors import load_seasons
 import numpy as np
 from models.classifiers import *
 
@@ -113,11 +113,7 @@ def experiment_3(train_seasons, test_seasons):
     log_reg.test(test_features, test_labels)
     #log_reg.visualize()
     
-    # Support Vector Machine
-    svm = SupportVectorMachine()
-    svm.train(train_features, train_labels)
-    svm.test(test_features, test_labels)
-    #svm.visualize()
+    # Neural Network code not included
 
 if __name__ == '__main__':
 

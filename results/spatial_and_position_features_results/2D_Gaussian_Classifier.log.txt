@@ -16,3 +16,12 @@ Missed Gauss Params: mu=[25.18,14.03], cov=[142.64,-2.48;-2.48,77.03]
 Test Accuracy: 0.571297
 Miss Baseline Accuracy: 0.533681
 
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-25 02:28:51.736207
+
+Training complete.
+Made Gauss Params: mu=[25.20,9.76], cov=[48.82,0.00;0.00,37.48]
+Missed Gauss Params: mu=[25.25,11.78], cov=[76.55,0.00;0.00,54.32]
+
+Test Accuracy: 0.582634
+Miss Baseline Accuracy: 0.487189
+

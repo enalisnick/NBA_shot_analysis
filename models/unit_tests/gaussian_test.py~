@@ -1,6 +1,0 @@
-from Distributions import *
-
-g = Gaussian(2)
-g.mu = np.array([1,2])
-g.sigma = np.array([[3,0],[0,4]])
-print g.pdf([[4, 4]])

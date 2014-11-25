@@ -1,6 +1,8 @@
 import numpy as np
 from classifiers import *
 
+""" Did this on the fly.  To do: write good ones """
+
 data = np.random.rand(100,2)
 memberships = np.random.rand(100,3)
 print data.shape
