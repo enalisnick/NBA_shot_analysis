@@ -3,7 +3,12 @@ NBA_shot_analysis
 
 Code for running various classifiers on NBA shot data.
 
-We setup an experiment by loading data by season
+First, we need to import data helpers and the learning models
+```python
+from data.data_accessors import load_seasons
+from models.classifiers import GaussianMixtureClassifier
+```
+Next we setup an experiment by loading data by season
 ```python
 train_seasons = ['2006-2007', '2007-2008']
 test_seasons = ['2008-2009']
