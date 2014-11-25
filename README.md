@@ -1,7 +1,7 @@
 NBA_shot_analysis
 =================
 
-Code for running various classifiers on NBA shot data.
+Code for running various classifiers on NBA shot data.  Dependencies: [Scikit-Learn](http://scikit-learn.org/stable/index.html) (and its dependencies)
 
 First, we need to import data helpers and the learning models
 ```python
