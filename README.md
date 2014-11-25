@@ -23,3 +23,5 @@ gauss_mixture_model.train(made_data, missed_data, 10)
 gauss_mixture_model.test(test_features, test_labels)
 gauss_mixture_model.visualize()
 ```
+
+![Alt text](NBA_shot_analysis/position_graphs/G/Gaussian_Mixture_Model.png?raw=true "Decision Boundary for Mix. of Gaussians")
