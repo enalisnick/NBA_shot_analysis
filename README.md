@@ -24,4 +24,4 @@ gauss_mixture_model.test(test_features, test_labels)
 gauss_mixture_model.visualize()
 ```
 
-![Alt text](NBA_shot_analysis/position_graphs/G/Gaussian_Mixture_Model.png?raw=true "Decision Boundary for Mix. of Gaussians")
+![Alt text](/position_graphs/G/Gaussian_Mixture_Model.png?raw=true "Decision Boundary for Mix. of Gaussians")
