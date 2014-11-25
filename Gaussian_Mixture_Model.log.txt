@@ -1,0 +1,52 @@
+Mixture of 2-D Gaussians Classifier (k=3) initialized at 2014-11-24 23:27:59.073216
+
+Log-Likelihood Progress:
+Iteration #0: -891609.3002
+Iteration #1: -891609.2612
+Iteration #2: -891609.2035
+Iteration #3: -891609.1105
+Iteration #4: -891608.9548
+Iteration #5: -891608.6901
+Iteration #6: -891608.2359
+Iteration #7: -891607.4538
+Iteration #8: -891606.1052
+Iteration #9: -891603.7819
+Log-Likelihood Progress:
+Iteration #0: -1174166.7747
+Iteration #1: -1174152.5590
+Iteration #2: -1174082.9130
+Iteration #3: -1173812.6065
+Iteration #4: -1173228.5472
+Iteration #5: -1172640.0817
+Iteration #6: -1172203.9383
+Iteration #7: -1171873.9845
+Iteration #8: -1171618.4053
+Iteration #9: -1171415.8183
+Training complete.
+Made Gauss #0 Params: mu=[25.18,13.83], cov=[131.24,-1.52;-1.52,73.60]
+Missed Gauss #0 Params: mu=[25.37,13.84], cov=[169.41,-0.91;-0.91,63.87]
+Made Gauss #1 Params: mu=[25.19,13.60], cov=[130.70,-1.38;-1.38,71.89]
+Missed Gauss #1 Params: mu=[25.37,14.75], cov=[167.21,-1.40;-1.40,69.49]
+Made Gauss #2 Params: mu=[25.30,13.55], cov=[130.75,-0.85;-0.85,71.44]
+Missed Gauss #2 Params: mu=[25.14,19.72], cov=[148.56,-3.55;-3.55,122.63]
+Test Accuracy: 0.580941
+Miss Baseline Accuracy: 0.561534
+
+Mixture of 2-D Gaussians Classifier (k=3) initialized at 2014-11-25 00:57:47.755025
+
+Log-Likelihood Progress:
+Iteration #0: -927669.0142
+Iteration #1: -927668.5120
+Iteration #2: -927666.8260
+Iteration #3: -927660.8978
+Iteration #4: -927639.8616
+Iteration #5: -927566.9745
+Iteration #6: -927327.3018
+Iteration #7: -926587.5519
+Iteration #8: -924463.7140
+Iteration #9: -918787.7404
+Log-Likelihood Progress:
+Iteration #0: -1124783.2625
+Iteration #1: -1124729.3213
+Iteration #2: -1124376.4084
+Iteration #3: -1123423.1274

@@ -1,0 +1,54 @@
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-23 23:09:34.618506
+
+Training complete.
+Made Gauss Params: mu=[25.13,12.16], cov=[105.81,-1.09;-1.09,62.55]
+Missed Gauss Params: mu=[25.22,14.63], cov=[142.55,-1.96;-1.96,82.45]
+
+Test Accuracy: 0.565979
+Miss Baseline Accuracy: 0.538816
+
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-23 23:55:48.577862
+
+Training complete.
+Made Gauss Params: mu=[24.95,9.17], cov=[41.39,-0.32;-0.32,31.16]
+Missed Gauss Params: mu=[25.00,11.07], cov=[67.26,0.64;0.64,46.50]
+
+Test Accuracy: 0.588092
+Miss Baseline Accuracy: 0.479613
+
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-24 00:18:04.082038
+
+Training complete.
+Made Gauss Params: mu=[24.99,13.29], cov=[142.72,-1.05;-1.05,72.36]
+Missed Gauss Params: mu=[25.20,15.61], cov=[181.08,-1.92;-1.92,88.45]
+
+Test Accuracy: 0.563024
+Miss Baseline Accuracy: 0.570092
+
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-24 00:37:37.300833
+
+Training complete.
+Made Gauss Params: mu=[25.54,10.56], cov=[58.70,-0.04;-0.04,44.94]
+Missed Gauss Params: mu=[25.57,12.65], cov=[87.87,-1.29;-1.29,62.64]
+
+Test Accuracy: 0.576349
+Miss Baseline Accuracy: 0.497009
+
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-24 00:54:04.550885
+
+Training complete.
+Made Gauss Params: mu=[25.27,13.73], cov=[128.51,-1.31;-1.31,72.29]
+Missed Gauss Params: mu=[25.32,16.07], cov=[158.25,-2.23;-2.23,91.22]
+
+Test Accuracy: 0.555270
+Miss Baseline Accuracy: 0.559970
+
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-24 02:13:58.724443
+
+Training complete.
+Made Gauss Params: mu=[24.96,11.46], cov=[103.52,-1.71;-1.71,56.47]
+Missed Gauss Params: mu=[25.09,13.92], cov=[144.43,-2.78;-2.78,76.13]
+
+Test Accuracy: 0.570689
+Miss Baseline Accuracy: 0.534157
+

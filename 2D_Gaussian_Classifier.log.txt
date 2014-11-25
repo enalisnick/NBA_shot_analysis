@@ -1,0 +1,18 @@
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-24 23:27:14.327436
+
+Training complete.
+Made Gauss Params: mu=[25.22,13.66], cov=[130.90,-1.25;-1.25,72.33]
+Missed Gauss Params: mu=[25.30,16.00], cov=[162.11,-2.17;-2.17,90.78]
+
+Test Accuracy: 0.557432
+Miss Baseline Accuracy: 0.561534
+
+2-D Gaussian Classifier (made:mu=[0.0,0.0] / missed:mu=[0.0,0.0]) initialized at 2014-11-25 00:57:02.921671
+
+Training complete.
+Made Gauss Params: mu=[25.06,11.60], cov=[102.41,-1.43;-1.43,57.71]
+Missed Gauss Params: mu=[25.18,14.03], cov=[142.64,-2.48;-2.48,77.03]
+
+Test Accuracy: 0.571297
+Miss Baseline Accuracy: 0.533681
+

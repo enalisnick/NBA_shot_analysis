@@ -1,0 +1,4 @@
+from classifiers import *
+
+data = np.random.rand(100,2)
+

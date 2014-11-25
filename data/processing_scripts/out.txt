@@ -1,0 +1,8 @@
+set(['a moute 3pt', 'a moute layup', 'driving hook', 'step back jump', 'running tip', 'a moute fade away jumper', 'a moute dunk', 'turnaround hook', 'a moute jump bank hook', 'driving dunk', 'jump', 'hook', 'running finger roll', 'jump bank', 'running hook', 'running tip-in', 'alley oop dunk', 'driving bank', 'fade away jumper', 'turnaround fade away', 'driving reverse layup', 'de souza jump', 'turnaround bank', 'driving finger roll', 'tip', 'a moute driving reverse layup', 'a moute tip', 'a moute pullup jump', 'running finger roll layup', 'putback layup', 'putback reverse dunk', 'turnaround bank hook', 'pullup jump', 'running slam dunk', 'a moute driving layup', 'running dunk', 'turnaround finger roll', 'dunk', 'a moute putback dunk', 'running bank', '3pt', 'a moute hook', 'alley oop layup', 'hook bank', 'turnaround jump', 'putback dunk', 'de souza driving layup', 'layup', 'a moute putback layup', 'putback slam dunk', 'pullup bank', 'slam dunk', 'running layup', 'driving jump', 'jump hook', 'driving layup', 'reverse layup', 'a moute jump', 'driving slam dunk', 'running reverse layup', 'follow up dunk', 'fade away', 'driving bank hook', 'floating jump', 'finger roll layup', 'reverse dunk', 'finger roll', 'a moute slam dunk', 'running jump', 'jump bank hook', 'running 3pt', 'a moute reverse layup', 'running finger', 'tip-in', 'driving finger roll layup', 'running bank hook', 'alley oop layup shot', 'fade away bank', 'reverse slam dunk'])
+
+3pt
+layup <— finger roll, tip
+hook
+jump <— bank
+dunk
+fade_away

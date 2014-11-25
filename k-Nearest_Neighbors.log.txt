@@ -1,0 +1,10 @@
+k-Nearest Neighbors Classifier (k=5) initialized at 2014-11-24 23:26:53.363019
+
+Test Accuracy: 0.559928
+Miss Baseline Accuracy: 0.561534
+
+k-Nearest Neighbors Classifier (k=5) initialized at 2014-11-25 00:56:29.241500
+
+Test Accuracy: 0.531985
+Miss Baseline Accuracy: 0.533681
+

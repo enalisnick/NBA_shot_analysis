@@ -1,0 +1,30 @@
+Logistic Regression Classifier initialized at 2014-11-23 23:06:28.253474
+
+Test Accuracy: 0.588324
+Miss Baseline Accuracy: 0.538816
+
+Logistic Regression Classifier initialized at 2014-11-23 23:55:44.487861
+
+Test Accuracy: 0.581195
+Miss Baseline Accuracy: 0.479613
+
+Logistic Regression Classifier initialized at 2014-11-24 00:18:02.059074
+
+Test Accuracy: 0.563440
+Miss Baseline Accuracy: 0.570092
+
+Logistic Regression Classifier initialized at 2014-11-24 00:37:34.499787
+
+Test Accuracy: 0.572405
+Miss Baseline Accuracy: 0.497009
+
+Logistic Regression Classifier initialized at 2014-11-24 00:53:48.864260
+
+Test Accuracy: 0.591196
+Miss Baseline Accuracy: 0.559970
+
+Logistic Regression Classifier initialized at 2014-11-24 02:13:40.688204
+
+Test Accuracy: 0.589908
+Miss Baseline Accuracy: 0.534157
+
