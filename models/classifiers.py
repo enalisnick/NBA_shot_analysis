@@ -152,6 +152,7 @@ class Gaussian2DClassifier(Classifier):
         self.__name__ = "2D_Gaussian_Classifier"
         self.made_gauss = Gaussian(2) #fit one Gaussian to made shots
         self.missed_gauss = Gaussian(2) #fit another to missed shots
+        self.made_class_prior = None
         self.write_to_log("%s initialized at %s\n\n"%(self,dt.datetime.now()))
 
     def train(self, made_shot_training_data, missed_shot_training_data):
@@ -161,6 +162,7 @@ class Gaussian2DClassifier(Classifier):
         """
         self.made_gauss.batch_fit(made_shot_training_data)
         self.missed_gauss.batch_fit(missed_shot_training_data)
+        self.made_class_prior = float(made_shot_training_data.shape[0])/(made_shot_training_data.shape[0]+missed_shot_training_data.shape[0])
         self.write_to_log("Training complete.\n")
         self.write_to_log("Made Gauss Params: mu=[%.2f,%.2f], cov=[%.2f,%.2f;%.2f,%.2f]\n"
                           %(self.made_gauss.mu[0,0],self.made_gauss.mu[0,1],
@@ -179,7 +181,7 @@ class Gaussian2DClassifier(Classifier):
         n,d = test_data.shape
         predictions = np.zeros(n)
         for idx in xrange(n):
-            if self.made_gauss.pdf(test_data[idx,:]) >= self.missed_gauss.pdf(test_data[idx,:]):
+            if self.made_gauss.pdf(test_data[idx,:])*self.made_class_prior >= self.missed_gauss.pdf(test_data[idx,:])*(1-self.made_class_prior):
                 predictions[idx] = 1
         return predictions
 
@@ -200,6 +202,7 @@ class GaussianMixtureClassifier(Classifier):
         self.__name__ = "Gaussian_Mixture_Model"
         self.made_mixtures = [] # Gausses for made shots
         self.missed_mixtures = [] # Gausses for missed shots
+        self.made_class_prior = None
         for idx in xrange(num_of_mixtures):
             self.made_mixtures.append(Gaussian(2))
             self.missed_mixtures.append(Gaussian(2))
@@ -214,6 +217,7 @@ class GaussianMixtureClassifier(Classifier):
         # We should be re-running EM using several random initializations--to do.
         self.run_EM(self.made_mixtures, made_shot_training_data, max_iterations)
         self.run_EM(self.missed_mixtures, missed_shot_training_data, max_iterations)
+        self.made_class_prior = float(made_shot_training_data.shape[0])/(made_shot_training_data.shape[0]+missed_shot_training_data.shape[0])
         self.write_to_log("Training complete.\n")
         for idx in xrange(self.num_of_mixtures):
             self.write_to_log("Made Gauss #%d Params: mu=[%.2f,%.2f], cov=[%.2f,%.2f;%.2f,%.2f]\n"
@@ -238,7 +242,7 @@ class GaussianMixtureClassifier(Classifier):
             for mixture_idx in xrange(self.num_of_mixtures):
                 made_prob.append(self.made_mixtures[mixture_idx].pdf(test_data[data_idx,:]))
                 missed_prob.append(self.missed_mixtures[mixture_idx].pdf(test_data[data_idx,:]))
-            if max(made_prob) >= max(missed_prob):
+            if max(made_prob)*self.made_class_prior >= max(missed_prob)*(1-self.made_class_prior):
                 predictions[data_idx] = 1
         return predictions
 
