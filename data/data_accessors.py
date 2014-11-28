@@ -1,20 +1,21 @@
 import numpy as np
 
-def load_seasons(seasons, split_flag=False, attributes=None, with_attributes_flag=False):
+def load_seasons(seasons, split_flag=False, attributes=None, with_attributes_flag=False, search_name_flag=False):
     if attributes==None:
         data_loader = load_location_data
     else:
         data_loader = load_data_by_attributes
 
-    data1, data2 = data_loader(seasons[0], split_flag, attributes, with_attributes_flag)
+    data1, data2 = data_loader(seasons[0], split_flag, attributes, with_attributes_flag, search_name_flag)
     for season in seasons[1:]:
-        temp_data1, temp_data2 = data_loader(season, split_flag, attributes, with_attributes_flag)
+        temp_data1, temp_data2 = data_loader(season, split_flag, attributes, with_attributes_flag, search_name_flag)
         # stack data
-        data1 = np.vstack((data1, temp_data1))
-        data2 = np.vstack((data2, temp_data2))
+        if temp_data1.shape[1] == data1.shape[1]:
+            data1 = np.vstack((data1, temp_data1))
+            data2 = np.vstack((data2, temp_data2))
     return (data1, data2)
 
-def load_location_data(season, split_flag, attributes, with_attributes_flag):
+def load_location_data(season, split_flag, attributes, with_attributes_flag, search_name_flag):
     """ Loads just location data """
     # load made shots
     with open('./data/made_shots_rollup/'+season+'.made_shots.csv') as f:
@@ -39,10 +40,10 @@ def load_location_data(season, split_flag, attributes, with_attributes_flag):
     np.random.shuffle(Y)
     return (X, Y)
 
-def load_data_by_attributes(season, split_flag, attributes, with_attributes_flag):
+def load_data_by_attributes(season, split_flag, attributes, with_attributes_flag, search_name_flag):
     """ Loads data with specific attributes """
-    X_made = load_data_by_attributes_helper('./data/made_shots_rollup/'+season+'.made_shots.csv', attributes, with_attributes_flag)
-    X_missed = load_data_by_attributes_helper('./data/missed_shots_rollup/'+season+'.missed_shots.csv', attributes, with_attributes_flag)
+    X_made = load_data_by_attributes_helper('./data/made_shots_rollup/'+season+'.made_shots.csv', attributes, with_attributes_flag, search_name_flag)
+    X_missed = load_data_by_attributes_helper('./data/missed_shots_rollup/'+season+'.missed_shots.csv', attributes, with_attributes_flag, search_name_flag)
 
     if split_flag:
         return (X_made, X_missed)
@@ -59,18 +60,23 @@ def load_data_by_attributes(season, split_flag, attributes, with_attributes_flag
     np.random.shuffle(Y)
     return (X, Y)
 
-def load_data_by_attributes_helper(file_name, attributes, with_attributes_flag):
+def load_data_by_attributes_helper(file_name, attributes, with_attributes_flag, search_name_flag):
     #alt_shot_type_map = {'tip':'layup', 'finger':'layup', 'bank':'jump'}
     data = []
     with open(file_name) as f:
         content = f.readlines()
         for line in content:
             line = line.rstrip().replace('tip','layup').replace('finger','layup').replace('bank','jump').split(',')
+            player_name = line[0]
             line = line[1:] #get rid of player name
             keep_line = False
             for feature_idx in xrange(len(line)):
                 for attribute in attributes:
                     if attribute in line[feature_idx]:
+                        keep_line = True
+                    # HACK: We can't keep player names since we just 'F', 'G', etc for positions
+                    # but I want to get players by name for embedding, so I added this flag for the time being
+                    if search_name_flag and len(attribute)>1 and attribute in player_name:
                         keep_line = True
             if keep_line:
                 if not with_attributes_flag:
