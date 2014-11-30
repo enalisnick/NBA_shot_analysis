@@ -14,7 +14,6 @@ train_seasons = ['2006-2007', '2007-2008']
 test_seasons = ['2008-2009']
 # load training data
 made_data, missed_data = load_seasons(train_seasons, split_flag=True)
-train_features, train_labels = load_seasons(train_seasons)
 # load test data
 test_features, test_labels = load_seasons(test_seasons)
 ```
